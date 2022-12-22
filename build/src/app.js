@@ -44,10 +44,7 @@ const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 // Server & Routes
 app.use(express_1.default.json());
-app.use((0, cors_1.default)({
-    origin: "*",
-    credentials: true,
-}));
+app.use((0, cors_1.default)());
 app.listen(process.env.HEROKU_PORT || process.env.PORT, () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         console.log(`App is running at port ${process.env.HEROKU_PORT || process.env.PORT}`);

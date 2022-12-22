@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.listen(process.env.HEROKU_PORT || process.env.PORT, async () => {
+app.listen(process.env.PORT, async () => {
     try {
       console.log(`App is running at port ${process.env.HEROKU_PORT || process.env.PORT}`)
     await connect();
